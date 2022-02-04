@@ -17,13 +17,13 @@ class UserSeeder extends Seeder
     {
         $user = new User();
         $user->name = "Adinata";
-        $user->password = Hash::make('adinata');
+        $user->password = bcrypt('adinata');
         $user->email = "adinata@gmail.com";
         $user->save();
 
         $user = new User();
         $user->name = "user";
-        $user->password = Hash::make('user');
+        $user->password = bcrypt('user');
         $user->email = "user@gmail.com";
         $user->save();
     }
